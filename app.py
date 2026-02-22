@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+import os
+curr_path = os.getcwd()
+font_path = os.path.join(curr_path, "NanumGothic.ttf")
 
 # Configure matplotlib for Korean fonts
 plt.rcParams['font.family'] = 'NanumGothic' # Ensure this font is installed in the environment where streamlit runs
