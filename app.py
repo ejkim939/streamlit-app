@@ -6,9 +6,15 @@ import os
 curr_path = os.getcwd()
 font_path = os.path.join(curr_path, "NanumGothic.ttf")
 
-# Configure matplotlib for Korean fonts
-plt.rcParams['font.family'] = 'NanumGothic' # Ensure this font is installed in the environment where streamlit runs
+font_prop = fm.FontProperties(fname=font_path)
+
+# 3. 전역 설정 (모든 텍스트에 적용 시도)
+plt.rc('font', family=font_prop.get_name())
 plt.rcParams['axes.unicode_minus'] = False
+
+# Configure matplotlib for Korean fonts
+#plt.rcParams['font.family'] = 'NanumGothic' # Ensure this font is installed in the environment where streamlit runs
+#plt.rcParams['axes.unicode_minus'] = False
 
 st.set_page_config(layout="wide")
 st.title('서울 지하철 이용객 분석 대시보드')
