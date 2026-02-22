@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Configure matplotlib for Korean fonts
-plt.rcParams['font.family'] = 'Malgun Gothic' # Ensure this font is installed in the environment where streamlit runs
+plt.rcParams['font.family'] = 'NanumGothic' # Ensure this font is installed in the environment where streamlit runs
 plt.rcParams['axes.unicode_minus'] = False
 
 st.set_page_config(layout="wide")
